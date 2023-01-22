@@ -1,0 +1,26 @@
+/**index.wxss**/
+.userinfo {
+  /*弹性布局*/
+  display: flex;
+  /* 纵向排列 */
+  flex-direction: column;
+  /*居中*/  
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 140px;
+}
+
+.user-time {
+  margin-top: 100px;
+}

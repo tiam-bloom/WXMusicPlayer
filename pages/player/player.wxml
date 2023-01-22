@@ -1,0 +1,7 @@
+<!--pages/player/player.wxml-->
+
+<view>当前歌曲id:{{musicId}}</view>
+<!--index.wxml-->
+<audio poster="{{imgSrc}}" name="{{musicName}}" author="{{author}}" src="{{musicUrl}}" id="myAudio" controls loop bindplay="funplay" bindpause="funpause" binderror="funerror"></audio>
+
+<view>{{Lyrics}}</view>

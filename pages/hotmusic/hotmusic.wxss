@@ -1,0 +1,11 @@
+/* pages/hotmusic.wxss */
+/* image {
+  width: 10px;
+} */
+
+.hotmusicDIV {
+  background-color: rgb(255, 246, 127);
+  padding: 20px;
+  border-radius:25px;
+  margin: 10px;
+}

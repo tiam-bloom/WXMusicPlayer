@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/music/music",
+    "pages/player/player",
+    "pages/hotmusic/hotmusic",
+    "pages/utils/utils",
+    "pages/swiper/swiper",
+    "pages/kugouMusic/kugouMusic",
+    "pages/kugouPlayer/kugouPlayer",
+    "pages/kuwoMusic/kuwoMusic",
+    "pages/qqMusic/qqMusic",
+    "pages/test",
+    "pages/test/test"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#527f76",
+    "navigationBarTitleText": "网易云Music",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

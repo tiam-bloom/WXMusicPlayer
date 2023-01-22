@@ -1,0 +1,7 @@
+<!--pages/test/test.wxml-->
+
+<!--导入文件 格式化日期-->
+<wxs module="tutil" src="../index/data.wxs"></wxs>
+
+<text>{{tutil.formatTime(time)}}</text>
+

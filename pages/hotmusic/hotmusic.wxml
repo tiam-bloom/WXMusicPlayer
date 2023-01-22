@@ -1,0 +1,10 @@
+<!--pages/hotmusic.wxml-->
+<!-- 列表渲染-结果显示 -->
+<view>
+  <view bindtap="playerView" class="hotmusicDIV" wx:for="{{hotmusicList}}" wx:key="{{item.score}}">
+    <view> </view>
+    <view>{{index+1}}、《{{item.searchWord}}》</view>
+    <view>{{item.content}} </view>
+    <!-- <image src="{{item.iconUrl}}" mode = "aspectFit"></image> -->
+  </view>
+</view>

@@ -1,0 +1,13 @@
+/* pages/kugouMusic/kugouMusic.wxss */
+.musicDiv {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: rgb(29, 180, 180);
+}
+.search-input {
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid darkcyan;
+  padding: 10px;
+}

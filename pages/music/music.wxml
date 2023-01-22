@@ -1,0 +1,17 @@
+<!--pages/music/music.wxml-->
+<!-- 搜索表单 -->
+<view>
+  <form action="post">
+    <view class="tips">实时显示搜索结果：{{inputValue}}</view>
+    <view class="Search">
+      <input placeholder-style="color:rgb(29, 180, 180);font-size:18px" class="search-input" maxlength="10" bindinput="bindKeyInput" placeholder="请输入你想要听的歌曲"/>
+    </view>
+    <!-- <view><button type="primary" formType="submit" confirm-type="search">Search</button></view> -->
+  </form>
+</view>
+<!-- 列表渲染-结果显示 -->
+<view>
+  <view class="musicDiv" id="{{item.id}}" bindtap="playerView" wx:for="{{objectArray}}">
+    {{index+1}}、《{{item.name}}》-{{item.artists[0].name}}
+  </view>
+</view>

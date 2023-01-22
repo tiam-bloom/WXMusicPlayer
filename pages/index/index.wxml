@@ -1,0 +1,71 @@
+<!--index.wxml-->
+<wxs module="tutil" src="./data.wxs"></wxs>
+<!--导入文件 格式化日期-->
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}">
+      <view class="userinfo-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+    <!-- 条件渲染 -->
+    <block wx:elif="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+ 
+      
+   
+  <view class="user-time">
+    <button bindtap="bindTest" >时间测试 </button>
+    <text class="iconfont icon-xigua"></text>
+    <text>{{tutil.formatTime(time)}}</text>
+  </view>
+  <view>---</view>
+  <view style="width: 439rpx; height: 50rpx; display: block; box-sizing: border-box">
+    <button type="primary" bindtap="bindViewMusic" class="user-time" style="position: relative; left: -8rpx; top: -216rpx">
+      网易搜索<text class="iconfont icon-sousuo"></text>
+    </button>
+  </view>
+  <view>---</view>
+  <view style="width: 439rpx; height: 50rpx; display: block; box-sizing: border-box">
+    <button type="primary" bindtap="bindViewkugouMusic" class="user-time" style="position: relative; left: -8rpx; top: -216rpx">
+      酷狗搜索<text class="iconfont icon-sousuo"></text>
+    </button>
+  </view>
+  <view>---</view>
+  <view style="width: 439rpx; height: 50rpx; display: block; box-sizing: border-box">
+    <button type="primary" bindtap="bindViewkuwoMusic" class="user-time" style="position: relative; left: -8rpx; top: -216rpx">
+      酷我搜索<text class="iconfont icon-sousuo"></text>
+    </button>
+  </view>
+  <view>---</view>
+  <view style="width: 439rpx; height: 50rpx; display: block; box-sizing: border-box">
+    <button type="primary" bindtap="bindViewqqMusic" class="user-time" style="position: relative; left: -8rpx; top: -216rpx">
+      QQ搜索<text class="iconfont icon-sousuo"></text>
+    </button>
+  </view>
+  <view>---</view>
+  <view>
+    <button type="primary" bindtap="bindViewhotMusic" style="position: relative; left: -8rpx; top: 66rpx">
+      热搜榜<text class="iconfont icon-boluo"></text>
+    </button>
+  </view>
+  <view>---</view>
+  <view>
+    <button type="default" bindtap="bindViewSwiper" style="position: relative; left: -8rpx; top: 66rpx">
+      轮播页<text class="iconfont icon-meigui"></text>
+    </button>
+  </view>
+  <!-- <image src="../../images/audio_next.png"></image> -->
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>

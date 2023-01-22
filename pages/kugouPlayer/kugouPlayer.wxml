@@ -1,0 +1,7 @@
+<!--pages/kugouPlayer/kugouPlayer.wxml-->
+
+<view>歌曲hash:{{musicId}}</view>
+<!--index.wxml-->
+<audio poster="{{imgSrc}}" name="{{musicName}}" author="{{author}}" src="{{musicUrl}}" id="myAudio" controls loop bindplay="funplay" bindpause="funpause" binderror="funerror"></audio>
+
+<view>{{Lyrics}}</view>
